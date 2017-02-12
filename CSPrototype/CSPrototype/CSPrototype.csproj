@@ -2,7 +2,7 @@
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
-    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5A888B05-43D2-474E-8982-A9E216F1FC3C}</ProjectGuid>
@@ -12,7 +12,7 @@
     <AssemblyName>CSPrototype</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -54,6 +54,26 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="GettingStarted.Xamarin" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="box2d, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CocosSharp.1.7.1.0\lib\portable-net45+win+wpa81+wp81\box2d.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CocosSharp, Version=1.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CocosSharp.1.7.1.0\lib\portable-net45+win+wpa81+wp81\CocosSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CocosSharp.Forms, Version=1.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CocosSharp.Forms.1.7.1.0\lib\portable-net45+win+wpa81+wp81\CocosSharp.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MonoGame.Framework, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CocosSharp.1.7.1.0\lib\portable-net45+win+wpa81+wp81\MonoGame.Framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.2.0.45\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
       <Private>True</Private>
@@ -68,8 +88,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="GettingStarted.Xamarin" />
-    <None Include="packages.config" />
+    <Folder Include="Pages\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.2.0.45\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.2.0.45\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
