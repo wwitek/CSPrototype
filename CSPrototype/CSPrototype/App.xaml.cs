@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSPrototype.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,8 +13,7 @@ namespace CSPrototype
         public App()
         {
             InitializeComponent();
-
-            MainPage = new CSPrototype.MainPage();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

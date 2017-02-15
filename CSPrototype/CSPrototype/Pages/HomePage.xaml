@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:CSPrototype"
-             x:Class="CSPrototype.MainPage"
+             x:Class="CSPrototype.Pages.HomePage"
              xmlns:cs="clr-namespace:CocosSharp;assembly=CocosSharp.Forms">
   <Grid>
     <Grid.RowDefinitions>
@@ -13,9 +12,7 @@
     <cs:CocosSharpView Grid.Row="1"
                        ResolutionPolicy="ShowAll"
                        HorizontalOptions="FillAndExpand"
-                       VerticalOptions="FillAndExpand"
-                       BackgroundColor="Transparent">
-      
+                       VerticalOptions="FillAndExpand">
     </cs:CocosSharpView>
   </Grid>
 </ContentPage>
